@@ -60,4 +60,16 @@ public class MarkdownParseTest {
         
         assertEquals(expected, links);
     }
+
+    @Test
+    public void testMyFile4() throws IOException {
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("real-link.html");
+        
+        Path fileName = Path.of("my-test4.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        
+        assertEquals(expected, links);
+    }
 }
