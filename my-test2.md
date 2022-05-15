@@ -1,5 +1,3 @@
 # Title
-[Spaced-Out Link]
-
-   (this-link.html)
+[Spaced-Out Link](this-link.html)
 ![Image](example.png)
