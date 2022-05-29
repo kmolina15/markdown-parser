@@ -25,6 +25,16 @@ public class MarkdownParseTest {
     }
 
     @Test
+    public void testFile3() throws IOException {
+        ArrayList<String> expected = new ArrayList<>();
+        Path fileName = Path.of("test-file3.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+
+        assertEquals(expected, links);
+    }
+
+    @Test
     public void testMyFile1() throws IOException {
         ArrayList<String> expected = new ArrayList<>();
         expected.add("some-link.html");
